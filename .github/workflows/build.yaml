@@ -16,7 +16,7 @@ jobs:
         
       - name: Run npm install
         run: |
-          npm install && npm run build
+          pnpm run build
           
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
