@@ -15,9 +15,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         
-      - name: Run pnpm install
+      - name: Run pnpm install and pnpm test
         run: |
-          npm install -g pnpm@latest-10 && pnpm install && pnpm run build
+          npm install -g pnpm@latest-10 && pnpm install && pnpm run test:unit
+
+      - name: Run 
+        run: pnpm run build
 
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v2
