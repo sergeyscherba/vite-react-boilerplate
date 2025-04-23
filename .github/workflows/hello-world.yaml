@@ -3,9 +3,8 @@ on:
   push:
     branches:
       - main
-
 jobs:
-  hello-world:
+  hello-world-script:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,7 +13,10 @@ jobs:
 
       - name: Print Hello, World!
         run: echo "Hello, World!"
-
+        
+  hello-world-action:
+    runs-on: ubuntu-latest
+    steps:
       - name: Print Hello, World! using GitHub Script
         uses: actions/github-script@v6
         with:
