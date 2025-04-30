@@ -47,3 +47,9 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+           app-name: app-fe-suitt-lab-001
+           images: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
+
