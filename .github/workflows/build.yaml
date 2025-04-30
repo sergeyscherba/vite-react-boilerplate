@@ -42,3 +42,8 @@ jobs:
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}
 
+
+      - uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
